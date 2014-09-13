@@ -21,7 +21,7 @@
 
     <!-- Add your site or application content here -->
     <div class="container" ng-controller = 'MainCtrl'>
-      <div id="screen1"  >
+      <div id="screen1"  ng-style='screenHide1'>
         <div class="showTimeBox" ng-click="screenClick1()" ng-class='screenEnter[0]' >
           <p ng-class='screenEnter[1]'>Show<br>Time</p>
           <!-- <div class="showTimeBoxShadow"></div> -->
@@ -32,13 +32,18 @@
         <div class="transfer transfer3" ng-class='transfer'></div>
         <div class="transfer transfer4" ng-class='transfer'></div>
         <div class="transfer transfer5" ng-class='transfer'></div> -->
-        <div class="webTextBox" ng-style='webTextBoxDisplay' ng-class='webTextBoxEnter'>
+      </div>
+      <div id="screen2" ng-class='screenEnter2' ng-style='screenStyle2' ng-click='screenClick2()'>
+        <div class="webTextBox" ng-style='webTextBoxDisplay' ng-class='webTextBoxEnter' >
           <span class="textW"  ng-class='textWEnter'>W</span>
           <span class="textE" ng-class='textEEnter'>e</span>
           <span class="textB" ng-class='textBEnter'>b</span>
+          <span class="textH" ng-class='textHEnter'>h</span>
+          <span class="textY" ng-class='textYEnter'>y</span>
+          <span class="textQ" ng-class='textQEnter'>?</span>
         </div>
-      </div>
-      <div id="screen2" ng-controller='screenCtr1' ng-class='screenEnter2'>
+        <span class="screenNetSpeed2" ng-bind='screenChangeTime2'></span>
+        <span class='iconfont screenIE2'  ng-class='ieEnter'>&#xe600</span>
       </div>
       <div id="screen3"></div>
       <div id="screen4"></div>
