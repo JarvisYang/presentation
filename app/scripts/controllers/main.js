@@ -17,6 +17,7 @@ var presentationApp = angular.module('presentationApp');
     ];
 
     	$scope.screenClickCount2 = 0;
+    	$scope.screenClickCount3 = 0;
     	$scope.screenEnter = ['',''];
 	$scope.transfer = '';
 
@@ -54,21 +55,57 @@ var presentationApp = angular.module('presentationApp');
 				$scope.ieEnter = 'ieEnter';
 				$scope.screenClickCount2++;
 				break;
+			case 3:
+				$scope.screenLeave20 = {'padding':'0px','opacity':'0!important','transform': 'scale(0)','transition':' all 0.5s ease-out'};
+				$scope.screenLeave21 =  {'padding':'0px','opacity':0,'transform': 'scale(0)','transition':' all 0.5s ease-out'};
+				$scope.screenLeave22 = {'padding':'0px','opacity':0,'transform': 'scale(0)','transition':' all 0.5s ease-out'};
+				$timeout(function(){
+					$scope.screenStyle2 = {'display':'none'};
+					$scope.screenStyle3 = {'top':'0'};
+					$scope.screenTextEnter3 = 'screenTextEnter3';
+				},500);
+				break;
+			}
+	};
 
-		}
+	$scope.screenClick3 = function(){
+		switch($scope.screenClickCount3){
+			case 0:
+				$scope.screenTextBoxLeave3 = 'screenTextBoxLeave3';
+				$scope.product1 = 'productEnter';
+				$scope.screenClickCount3++;
+				break;
+			case 1:
+				$scope.product1 = '';
+				$scope.product2 = 'productEnter';
+				$scope.screenClickCount3++;
+				break;
+			case 2:
+				$scope.product2 = '';
+				$scope.product3 = 'productEnter';
+				$scope.screenClickCount3++;
+				break;
+			case 3:
+				$scope.product3 = '';
+				$scope.product4 = 'productEnter';
+				$scope.screenClickCount3++;
+				break;
+			}
+	};
+
 
 	$scope.changeTime = function(){
 		var countTime = 120;
 		var num = [1,2,3];
 		$timeout(function() {
 			var setTime = $interval(function(){
-				if(countTime > 20){
+				if(countTime > 80){
 					num[0] = num[0] === 1?9:num[0]-1;
 				}
 				else{
 					num[0] = 4;
 				}
-				if(countTime > 10){
+				if(countTime > 40){
 					num[1] = num[1] ===9?1:num[1]+1;
 				}
 				else{
@@ -90,5 +127,5 @@ var presentationApp = angular.module('presentationApp');
 			},5);
 		}, 800);
 	};
-	};
+
   });

@@ -20,6 +20,9 @@
   top: 100%;
 }
 
+/*************************
+  *screen_1***************
+  ************************/
 
 /*******screen_1_static_style*******/
 #screen1{
@@ -121,6 +124,10 @@
    height:100%;
    transform: rotate(0deg);
 }
+
+/*************************
+  *screen_2***************
+  ************************/
 
 /*********screen_2_static_style********/
 #screen2{cursor: default;}
@@ -254,4 +261,66 @@
   padding-left: 470px;
    transition: transform 0.8s ease-in-out,padding-left 0.8s ease-in-out,padding-top 0.8s ease-in-out;
    transform: scale(1);
+}
+/******screen_2_animation_for_ forth_click******/
+.screenLeave20{
+  transition: transform 0.8s ease-out;
+}
+
+/*************************
+  *screen_3***************
+  ************************/
+
+  /*******screen_3_static_style*******/
+  #screen3{
+    cursor: default;
+  }
+.screenTextBox3{
+  display: inline-block;
+  width:auto;
+  min-width: 100%;
+  height:150px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin:auto;
+  text-align: center;
+  overflow: hidden;
+}
+.screenTextBox3 div{
+  display: inline-block;
+  padding:0px 5px;
+  opacity:0;
+}
+.screenTextBox3 span{
+  color: #fff;
+  line-height: 150px;
+  font-size: 110px;
+}
+#screen3 img{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom:0;
+  margin:auto;
+  width :800px;
+  opacity:0;
+  transition: transform 0.5s ease-in-out,opacity 0.8s ease-in-out;
+  transform: scale(0);
+}
+
+/******screen_3_animation_for_first_click******/
+.screenTextBox3  .screenTextEnter3{
+  transition: opacity 1s ease ,padding-right 1s ease ,padding-left 1s ease ;
+  padding:0px;
+  opacity:1;
+}
+#screen3 .screenTextBoxLeave3{
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#screen3>.productEnter{
+transform: scale(1);
+opacity:1;
 }
