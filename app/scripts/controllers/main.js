@@ -18,6 +18,7 @@ var presentationApp = angular.module('presentationApp');
 
     	$scope.screenClickCount2 = 0;
     	$scope.screenClickCount3 = 0;
+    	$scope.screenClickCount4 = 0;
     	$scope.screenEnter = ['',''];
 	$scope.transfer = '';
 
@@ -76,23 +77,62 @@ var presentationApp = angular.module('presentationApp');
 				$scope.screenClickCount3++;
 				break;
 			case 1:
+				$scope.linkShow = 'linkShow';
+				$scope.screenClickCount3++;
+			 	break;
+			case 2:
 				$scope.product1 = '';
+				$scope.linkShow = '';
 				$scope.product2 = 'productEnter';
 				$scope.screenClickCount3++;
 				break;
-			case 2:
+			case 3:
 				$scope.product2 = '';
 				$scope.product3 = 'productEnter';
 				$scope.screenClickCount3++;
 				break;
-			case 3:
+			case 4:
 				$scope.product3 = '';
 				$scope.product4 = 'productEnter';
 				$scope.screenClickCount3++;
 				break;
+			case 5:
+				$scope.product4 = '';
+				$timeout(function(){
+					$scope.screenStyle3 = {'display':'none'};
+					$scope.screenStyle4 = {'top':0};
+					$scope.screenTextEnter4 = 'screenTextEnter4';
+				},500);
 			}
 	};
 
+	$scope.screenClick4 = function(){
+		switch($scope.screenClickCount4){
+			case 0:
+				$scope.screenTextBoxLeave4 = 'screenTextBoxLeave4';
+				$scope.future1 = 'productEnter';
+				$scope.screenClickCount4++;
+				break;
+			case 1:
+				$scope.future1 = '';
+				$scope.future2 = 'productEnter';
+				$scope.screenClickCount4++;
+				break;
+			case 2:
+				$scope.future2 = '';
+				$scope.future3 = 'productEnter';
+				$scope.screenClickCount4++;
+				break;
+			case 3:
+				$scope.future3 = '';
+				$scope.screenTextEnter5 = 'screenTextEnter5';
+				//$timeout(function(){
+				// 	$scope.screenStyle3 = {'display':'none'};
+				// 	$scope.screenStyle4 = {'top':0};
+				// 	$scope.screenTextEnter4 = 'screenTextEnter4';
+				// },500);
+			}
+	};
 
 	$scope.changeTime = function(){
 		var countTime = 120;

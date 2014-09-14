@@ -38,17 +38,17 @@
   right: 0px;
   margin:auto;
   display: inline-block;
-  width:120px;
-  height:120px;
+  width:240px;
+  height:240px;
  /* background-color: rgba(255, 255, 255, 0.7);*/
   border-radius: 200px;
   text-align: center;
-  border:3px solid #fff;
+  border:5px solid #fff;
 }
 .showTimeBox>p{
-  margin-top: 20px;
-  font-size: 30px;
-  line-height: 40px;
+  margin-top: 40px;
+  font-size: 65px;
+  line-height: 80px;
   /*color: #505050;*/
   color: #fff;
   cursor: pointer;
@@ -297,7 +297,7 @@
   line-height: 150px;
   font-size: 110px;
 }
-#screen3 img{
+#screen3>img,#screen4>img{
   position: absolute;
   left: 0;
   right: 0;
@@ -306,8 +306,24 @@
   margin:auto;
   width :800px;
   opacity:0;
-  transition: transform 0.5s ease-in-out,opacity 0.8s ease-in-out;
+  transition: transform 0.5s ease-in-out,opacity 0.5s ease-in-out;
   transform: scale(0);
+}
+.flappyLink{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right:0;
+  font-size: 80px;
+  height: 200px;
+  width:800px;
+  text-align: center;
+  color: #fff;
+  margin:auto;
+  background-color: rgba(256,256,256,0.8);
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }
 
 /******screen_3_animation_for_first_click******/
@@ -323,4 +339,77 @@
 #screen3>.productEnter{
 transform: scale(1);
 opacity:1;
+}
+.linkShow{
+  opacity: 1;
+}
+/*************************
+  *screen_4***************
+  ************************/
+
+  /*******screen_4_static_style*******/
+ #screen4 .future2{
+    width:400px;
+  }
+.screenTextBox4{
+  display: inline-block;
+  width:auto;
+  min-width: 100%;
+  height:150px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin:auto;
+  text-align: center;
+  overflow: hidden;
+}
+.screenTextBox4 div{
+  display: inline-block;
+  padding:0px 5px;
+  opacity:0;
+}
+.screenTextBox4 span{
+  color: #fff;
+  line-height: 150px;
+  font-size: 110px;
+}
+/******screen_4_animation_for_first_click******/
+.screenTextBox4  .screenTextEnter4{
+  transition: opacity 1s ease ,padding-right 1s ease ,padding-left 1s ease ;
+  padding:0px;
+  opacity:1;
+}
+#screen4 .screenTextBoxLeave4{
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#screen4>.productEnter{
+transform: scale(1);
+opacity:1;
+}
+.screenTextBox5{
+  display: inline-block;
+  width:700px;
+  height:200px;
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  overflow: hidden;
+  text-align: center;
+}
+.screenText5{
+  line-height: 200px;
+  font-size: 150px;
+  color:#fff;
+  text-align: center;
+  opacity: 0;
+  margin-top: 200px;
+}
+.screenTextEnter5{
+  transition:margin-top 1s ease 0.5s,opacity 0.5s ease-in 1s;
+  opacity: 1;
+  margin-top: 0;
 }
