@@ -22,6 +22,8 @@ var presentationApp = angular.module('presentationApp');
     	$scope.screenEnter = ['',''];
 	$scope.transfer = '';
 
+	
+
  	$scope.screenClick1 = function(){
 		$scope.screenEnter[0] = 'screenEnter0';
 		$scope.screenEnter[1] = 'screenEnter1';
@@ -33,30 +35,25 @@ var presentationApp = angular.module('presentationApp');
 		$scope.screenEnter2 = 'screenEnter2';
 		$scope.webTextBoxEnter = 'webTextBoxEnter';
 		$scope.textWEnter = 'textWEnter';
-		$scope.textEEnter = 'textEEnter';
 		$scope.textBEnter = 'textBEnter';
+
+		$timeout($scope.screenClick2,3000);
 	};
 
 	$scope.screenClick2 = function(){
 		switch($scope.screenClickCount2){
-			case 0:
-				$scope.textEEnter = 'textELeave';
-				$scope.textBEnter = 'textBLeave';
-				$scope.textHEnter = 'textHEnter';
-				$scope.textYEnter = 'textYEnter';
-				$scope.textQEnter = 'textQEnter';
-				$scope.screenClickCount2++;
-				break;
-			case 1 :
+			case 0 :
 				$scope.webTextBoxEnter = 'webTextBoxMove';
 				$scope.changeTime();
 				$scope.screenClickCount2++;
+				$timeout($scope.screenClick2,2500);
 				break;
-			case 2:
+			case 1:
 				$scope.ieEnter = 'ieEnter';
 				$scope.screenClickCount2++;
+				$timeout($scope.screenClick2,2000);
 				break;
-			case 3:
+			case 2:
 				$scope.screenLeave20 = {'padding':'0px','opacity':'0!important','transform': 'scale(0)','transition':' all 0.5s ease-out'};
 				$scope.screenLeave21 =  {'padding':'0px','opacity':0,'transform': 'scale(0)','transition':' all 0.5s ease-out'};
 				$scope.screenLeave22 = {'padding':'0px','opacity':0,'transform': 'scale(0)','transition':' all 0.5s ease-out'};
@@ -65,6 +62,7 @@ var presentationApp = angular.module('presentationApp');
 					$scope.screenStyle3 = {'top':'0'};
 					$scope.screenTextEnter3 = 'screenTextEnter3';
 				},500);
+				$timeout($scope.screenClick3,3000);
 				break;
 			}
 	};
@@ -75,26 +73,31 @@ var presentationApp = angular.module('presentationApp');
 				$scope.screenTextBoxLeave3 = 'screenTextBoxLeave3';
 				$scope.product1 = 'productEnter';
 				$scope.screenClickCount3++;
+				$timeout($scope.screenClick3,1000);
 				break;
 			case 1:
 				$scope.linkShow = 'linkShow';
 				$scope.screenClickCount3++;
+				$timeout($scope.screenClick3,1500);
 			 	break;
 			case 2:
 				$scope.product1 = '';
 				$scope.linkShow = '';
 				$scope.product2 = 'productEnter';
 				$scope.screenClickCount3++;
+				$timeout($scope.screenClick3,1500);
 				break;
 			case 3:
 				$scope.product2 = '';
 				$scope.product3 = 'productEnter';
 				$scope.screenClickCount3++;
+				$timeout($scope.screenClick3,1500);
 				break;
 			case 4:
 				$scope.product3 = '';
 				$scope.product4 = 'productEnter';
 				$scope.screenClickCount3++;
+				$timeout($scope.screenClick3,1500);
 				break;
 			case 5:
 				$scope.product4 = '';
@@ -103,6 +106,7 @@ var presentationApp = angular.module('presentationApp');
 					$scope.screenStyle4 = {'top':0};
 					$scope.screenTextEnter4 = 'screenTextEnter4';
 				},500);
+				$timeout($scope.screenClick4,3000);
 			}
 	};
 
@@ -112,16 +116,19 @@ var presentationApp = angular.module('presentationApp');
 				$scope.screenTextBoxLeave4 = 'screenTextBoxLeave4';
 				$scope.future1 = 'productEnter';
 				$scope.screenClickCount4++;
+				$timeout($scope.screenClick4,1500);
 				break;
 			case 1:
 				$scope.future1 = '';
 				$scope.future2 = 'productEnter';
 				$scope.screenClickCount4++;
+				$timeout($scope.screenClick4,1500);
 				break;
 			case 2:
 				$scope.future2 = '';
 				$scope.future3 = 'productEnter';
 				$scope.screenClickCount4++;
+				$timeout($scope.screenClick4,2000);
 				break;
 			case 3:
 				$scope.future3 = '';

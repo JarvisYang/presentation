@@ -21,8 +21,8 @@
 
     <!-- Add your site or application content here -->
     <div class="container" ng-controller = 'MainCtrl'>
-      <div id="screen1"  ng-style='screenHide1'>
-        <div class="showTimeBox" ng-click="screenClick1()" ng-class='screenEnter[0]' >
+      <div id="screen1"  ng-style='screenHide1' ng-click="screenClick1()">
+        <div class="showTimeBox"  ng-class='screenEnter[0]' >
           <p ng-class='screenEnter[1]'>Show<br>Time</p>
           <!-- <div class="showTimeBoxShadow"></div> -->
         </div>
@@ -33,19 +33,15 @@
         <div class="transfer transfer4" ng-class='transfer'></div>
         <div class="transfer transfer5" ng-class='transfer'></div> -->
       </div>
-      <div id="screen2" ng-class='screenEnter2' ng-style='screenStyle2' ng-click='screenClick2()'>
+      <div id="screen2" ng-class='screenEnter2' ng-style='screenStyle2' >
         <div class="webTextBox" ng-style='screenLeave20' ng-class='webTextBoxEnter' >
-          <span class="textW"  ng-class='textWEnter'>W</span>
-          <span class="textE" ng-class='textEEnter'>e</span>
-          <span class="textB" ng-class='textBEnter'>b</span>
-          <span class="textH" ng-class='textHEnter'>h</span>
-          <span class="textY" ng-class='textYEnter'>y</span>
-          <span class="textQ" ng-class='textQEnter'>?</span>
+          <span class="textW" ng-class='textWEnter'>J</span>
+          <span class="textB" ng-class='textBEnter'>S</span>
         </div>
         <span class="screenNetSpeed2" ng-style='screenLeave21' ng-bind='screenChangeTime2'></span>
         <span class='iconfont screenIE2'  ng-class='ieEnter' ng-style='screenLeave22'>&#xe600</span>
       </div>
-      <div id="screen3" ng-style='screenStyle3' ng-click='screenClick3()' >
+      <div id="screen3" ng-style='screenStyle3'>
         <div class="screenTextBox3" ng-class='screenTextBoxLeave3'>
           <div ng-class='screenTextEnter3'><span>W</span></div>
           <div ng-class='screenTextEnter3'><span>h</span></div>
@@ -56,8 +52,8 @@
           <div ng-class='screenTextEnter3'><span>a</span></div>
           <div ng-class='screenTextEnter3'><span>n</span></div>
           <span>&nbsp</span>
-          <div ng-class='screenTextEnter3'><span>W</span></div>
-          <div ng-class='screenTextEnter3'><span>e</span></div>
+          <div ng-class='screenTextEnter3'><span>J</span></div>
+          <div ng-class='screenTextEnter3'><span>S</span></div>
           <span>&nbsp</span>
           <div ng-class='screenTextEnter3'><span>D</span></div>
           <div ng-class='screenTextEnter3'><span>o</span></div>
@@ -69,7 +65,7 @@
         <img src="./images/share.jpg" alt="" class="product3" ng-class='product3'>
         <img src="./images/AlloyStic2.png" alt="" class="product4" ng-class='product4'>
       </div>
-      <div id="screen4" ng-style='screenStyle4' ng-click='screenClick4()' >
+      <div id="screen4" ng-style='screenStyle4'  >
         <div class="screenTextBox4" ng-class='screenTextBoxLeave4'>
           <div ng-class='screenTextEnter4'><span>W</span></div>
           <div ng-class='screenTextEnter4'><span>h</span></div>
@@ -81,8 +77,8 @@
           <div ng-class='screenTextEnter4'><span>l</span></div>
           <div ng-class='screenTextEnter4'><span>l</span></div>
           <span>&nbsp</span>
-          <div ng-class='screenTextEnter4'><span>W</span></div>
-          <div ng-class='screenTextEnter4'><span>e</span></div>
+          <div ng-class='screenTextEnter4'><span>J</span></div>
+          <div ng-class='screenTextEnter4'><span>S</span></div>
           <span>&nbsp</span>
           <div ng-class='screenTextEnter4'><span>D</span></div>
           <div ng-class='screenTextEnter4'><span>o</span></div>

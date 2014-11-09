@@ -133,7 +133,7 @@
 #screen2{cursor: default;}
 #screen2>.webTextBox{
   display: inline-block;
-  width:430px;
+  width:257px;
   height:300px;
   position: absolute;
   top: 0;
@@ -222,7 +222,7 @@
 }
 .textBEnter{
   transition: all 2s ease 0.5s;
-  left:310px;
+  left:110px;
 }
 .textELeave{
   transition: all 1s ease;
